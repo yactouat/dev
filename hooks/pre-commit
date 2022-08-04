@@ -8,7 +8,7 @@ exec('docker exec -t dev-php-1 bash -c "/yactouatdev/vendor/bin/phpunit /yactoua
 echo PHP_EOL . implode(PHP_EOL, $output) . PHP_EOL;
 
 if ($returnCode !== 0) {
-    echo "Aborting commit..." . PHP_EOL;
+    echo "Aborting commit because tests did not pass..." . PHP_EOL;
     exit(1);
 }
 
