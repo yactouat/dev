@@ -1,0 +1,10 @@
+services:
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    working_dir: /yactouatdev
+    volumes:
+      - ./:/yactouatdev
+      - ./vendor:/yactouatdev/vendor/

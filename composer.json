@@ -1,0 +1,25 @@
+{
+    "name": "yactouat/dev",
+    "description": "package that contains a set of helper classes to use while in development phase",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yactouat\\Dev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yactouat",
+            "email": "yacine.touati.pro@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp -f ./hooks/pre-commit ./.git/hooks/pre-commit && chmod u+x ./.git/hooks/*"
+        ]
+    }
+}
